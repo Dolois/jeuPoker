@@ -72,19 +72,19 @@ public class Poker
 		// Créer une instance nommée deck de la Clase ArrayList
 		ArrayList<String> deck = new ArrayList<String>();
 
-		// Ajouter les 13 cartes de Coeur dans le paquet de 52 cartes
+		// Ajouter les 13 cartes de (C)oeur dans le paquet de 52 cartes
 		deck.add("1C");	deck.add("2C");	deck.add("3C");	deck.add("4C");	deck.add("5C");	deck.add("6C");	deck.add("7C");	
 		deck.add("8C");	deck.add("9C");	deck.add("10C"); deck.add("VC"); deck.add("DC");	deck.add("RC");
 		
-		// Ajouter les 13 cartes de Carreau dans le paquet de 52 cartes
+		// Ajouter les 13 cartes de (ca)rreau dans le paquet de 52 cartes
 		deck.add("1ca");deck.add("2ca");deck.add("3ca");deck.add("4ca");deck.add("5ca");deck.add("6ca");deck.add("7ca"); 
 		deck.add("8ca");deck.add("9ca");deck.add("10ca"); deck.add("Vca");deck.add("Dca");deck.add("Rca");
 		
-		// Ajouter les 13 cartes de Pic dans le paquet de 52 cartes
+		// Ajouter les 13 cartes de (P)ique dans le paquet de 52 cartes
 		deck.add("1P");	deck.add("2P");	deck.add("3P");	deck.add("4P");	deck.add("5P");	deck.add("6P");	deck.add("7P");	
 		deck.add("8P");	deck.add("9P");	deck.add("10P"); deck.add("VP");deck.add("DP");deck.add("RP");
 		
-		// Ajouter les 13 cartes de Trèfle dans le paquet de 52 cartes
+		// Ajouter les 13 cartes de (T)rèfle dans le paquet de 52 cartes
 		deck.add("1T");deck.add("2T");	deck.add("3T");	deck.add("4T");	deck.add("5T");	deck.add("6T");	deck.add("7T");	
 		deck.add("8T");	deck.add("9T");	deck.add("10T"); deck.add("VT");	deck.add("DT");	deck.add("RT");
 	
