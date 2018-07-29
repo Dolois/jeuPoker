@@ -1,14 +1,15 @@
 Ecrire un programme java 
 du jeu du poker avec les règles du texas holdem.
 
-Jeu de 52 cartes.
-Bien mélanger le jeu de cartes.
-Distribuer 2 cartes au joueur.
-Distribuer 3 cartes au flop.
+Générer un paquet de 52 cartes pour jouer au poker.
+ 
+Mélanger plusieurs fois le paquet de 52 cartes.
+ 
+Distribuer à plusieurs joueurs (6 dans mon cas) deux cartes par joueur.
 
-Puis the turn  pour la 4ème carte du flop.
-Puis the river pour la 5ème carte du flop.
+Distribuer 3 cartes au flop puis distribuer le turn puis distribuer le river.
 
-Faire évoluer le programme à la suite des
-cours prochains.
+Comparer les jeux de chaque joueur pour déterminer le gagnant de cette manche.
+
+Faire évoluer le programme à la suite des cours prochains.
 
