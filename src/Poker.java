@@ -17,8 +17,45 @@ public class Poker
 	 * Comparer les jeux des joueurs pour déterminer
 	 * le gagnant de cette manche
 	 *  
+	 *
+	 * valeurs des mains au poker
+	 * 
+	 * 1.  quinte flush royale	= AC+RC+DC+VC+10C
+	 * 
+	 * 2.  quinte flush			= 9C+8C+7C+6C+5C
+	 * 
+	 * 3.  carré				= AC+AT+AP+Ac+10C
+	 * 
+	 * 4.  full					= AC+AT+Ac+RC+RT
+	 * 
+	 * 5.  couleur				= AC+10C+8C+5C+2C
+	 * 
+	 * 6.  quinte				= 5C+4T+3c+2P+AC
+	 * 
+	 * 7.  brelan				= 10C+10T+10c+5C+3T
+	 * 
+	 * 8.  double paire			= AC+AT+RC+RT+5T
+	 * 
+	 * 9.  paire				= AC+AT+6C+4C+2c
+	 * 
+	 * 10. hauteur				= AC+9T+6c+4P+2C
+	 * 
+	 * 
+	 * RC,RT,Rc,RP		= 13 points
+	 * DC,DT,DC,DP		= 12 points
+	 * VC,VT,Vc,VP 		= 11 points
+	 * 10C,10T,10c,10P	= 10 points
+	 * 9C,9T,9c,9P		=  9 points
+	 * 8C,8T,8c,8P		=  8 points
+	 * 7C,7T,7c,7P		=  7 points
+	 * 6C,6T,6c,6P		=  6 points
+	 * 5C,5T,5c,5P		=  5 points
+	 * 4C,4T,4c,4P		=  4 points
+	 * 3C,3T,3c,3P		=  3 points
+	 * 2C,2T,2c,2P		=  2 points
+	 * AC,AT,Ac,AP		=  1 point ou 10 points
+	 * 
 	 */
-	
 	
 	/*
 	 * @param String[] joueur
@@ -62,38 +99,38 @@ public class Poker
 		return flop;
 	}
 	
-	public static void main(String [] args)
+	public static void main(String [] args) throws InterruptedException
 	{
 		// Créer une instance nommée deck de la Clase ArrayList
 		ArrayList<String> deck = new ArrayList<String>();
 
 		// Ajouter les 13 cartes de (C)oeur dans le paquet de 52 cartes
-		deck.add("AC");	deck.add("2C");	deck.add("3C");	deck.add("4C");	deck.add("5C");	deck.add("6C");	deck.add("7C");
-		deck.add("8C");	deck.add("9C");	deck.add("10C"); deck.add("VC");deck.add("DC");deck.add("RC");
+		deck.add("AC");deck.add("2C");deck.add("3C");deck.add("4C");deck.add("5C");deck.add("6C");deck.add("7C");
+		deck.add("8C");deck.add("9C");deck.add("10C");deck.add("VC");deck.add("DC");deck.add("RC");
 		
 		// Ajouter les 13 cartes de (c)arreau dans le paquet de 52 cartes
 		deck.add("Ac");deck.add("2c");deck.add("3c");deck.add("4c");deck.add("5c");deck.add("6c");deck.add("7c");
-		deck.add("8c");deck.add("9c");deck.add("10c"); deck.add("Vc");deck.add("Dc");deck.add("Rc");
+		deck.add("8c");deck.add("9c");deck.add("10c");deck.add("Vc");deck.add("Dc");deck.add("Rc");
 		
 		// Ajouter les 13 cartes de (P)ique dans le paquet de 52 cartes
-		deck.add("AP");	deck.add("2P");	deck.add("3P");	deck.add("4P");	deck.add("5P");	deck.add("6P");	deck.add("7P");
-		deck.add("8P");	deck.add("9P");	deck.add("10P"); deck.add("VP");deck.add("DP");deck.add("RP");
+		deck.add("AP");deck.add("2P");deck.add("3P");deck.add("4P");deck.add("5P");deck.add("6P");deck.add("7P");
+		deck.add("8P");deck.add("9P");deck.add("10P");deck.add("VP");deck.add("DP");deck.add("RP");
 		
 		// Ajouter les 13 cartes de (T)rèfle dans le paquet de 52 cartes
-		deck.add("AT");deck.add("2T");	deck.add("3T");	deck.add("4T");	deck.add("5T");	deck.add("6T");	deck.add("7T");
-		deck.add("8T");	deck.add("9T");	deck.add("10T"); deck.add("VT");deck.add("DT");	deck.add("RT");
+		deck.add("AT");deck.add("2T");deck.add("3T");deck.add("4T");deck.add("5T");deck.add("6T");deck.add("7T");
+		deck.add("8T");deck.add("9T");deck.add("10T");deck.add("VT");deck.add("DT");deck.add("RT");
 	
 
-		// Mélanger 5 fois le paquet de 52 cartes
-		for (int i = 0; i < 5; i++) {
+		// Mélanger 3 fois le paquet de 52 cartes
+		for (int i = 0; i < 3; i++) {
 			Collections.shuffle(deck);
 		}
 		
 		// Créer une instance nommée joueur de la Classe String[]
-		String[] joueur = new String[7];
+		String[] joueur = new String[5];
 		
 		// Créer une instance nommée joueur1 de la Classe String[]
-		String[] joueur1 = new String[7];
+		String[] joueur1 = new String[5];
 		// donne du joueur n°1
 		int donne = 2;
 		joueur = joueur1;
@@ -107,7 +144,7 @@ public class Poker
 		System.out.println();
 		
 		// Créer une instance nommée joueur2 de la Classe String[]
-		String[] joueur2 = new String[7];
+		String[] joueur2 = new String[5];
 		// donne du joueur n°2
 		donne = 2;
 		joueur = joueur2;
@@ -121,7 +158,7 @@ public class Poker
 		System.out.println();
 		
 		// Créer une instance nommée joueur3 de la Classe String[]
-		String[] joueur3 = new String[7];
+		String[] joueur3 = new String[5];
 		// donne du joueur n°3
 		donne = 2;
 		joueur = joueur3;
@@ -135,7 +172,7 @@ public class Poker
 		System.out.println();
 		
 		// Créer une instance nommée joueur4 de la Classe String[]
-		String[] joueur4 = new String[7];
+		String[] joueur4 = new String[5];
 		// donne du joueur n°4
 		donne = 2;
 		joueur = joueur4;
@@ -149,7 +186,7 @@ public class Poker
 		System.out.println();
 		
 		// Créer une instance nommée joueur5 de la Classe String[]
-		String[] joueur5 = new String[7];
+		String[] joueur5 = new String[5];
 		// donne du joueur n°5
 		donne = 2;
 		joueur = joueur5;
@@ -163,7 +200,7 @@ public class Poker
 		System.out.println();
 		
 		// Créer une instance nommée joueur6 de la Classe String[]
-		String[] joueur6 = new String[7];
+		String[] joueur6 = new String[5];
 		// donne du joueur n°6
 		donne = 2;
 		joueur = joueur6;
@@ -189,6 +226,7 @@ public class Poker
 			System.out.print("'" + flop[i] + "' ");
 		}
 		System.out.println();
+		Thread.sleep(2000);
 		
 		// donne du turn
 		donne = donne + 1;
@@ -199,6 +237,7 @@ public class Poker
 			System.out.print("'" + flop[i] + "' ");
 		}
 		System.out.println();
+		Thread.sleep(2000);
 		
 		// donne du river
 		donne = donne + 1;
@@ -209,21 +248,8 @@ public class Poker
 			System.out.print("'" + flop[i] + "' ");
 		}
 		System.out.println();
+
+		// comparer la main du joueur n° 1
 		
-		/*
-		 * valeurs des mains au poker
-		 * 
-		 * 1.  quinte flush royale	= AC+RC+DC+VC+10C
-		 * 2.  quinte flush			= 9C+8C+7C+6C+5C
-		 * 3.  carré				= AC+AT+AP+Ac+10C
-		 * 4.  full					= AC+AT+Ac+RC+RT
-		 * 5.  couleur				= AC+10C+8C+5C+2C
-		 * 6.  quinte				= 5C+4T+3c+2P+AC
-		 * 7.  brelan				= 10C+10T+10c+5C+3T
-		 * 8.  double paire			= AC+AT+RC+RT+5T
-		 * 9.  paire				= AC+AT+6C+4C+2c
-		 * 10. hauteur				= AC+9T+6c+4P+2C
-		 * 
-		 */
 	}
 }
